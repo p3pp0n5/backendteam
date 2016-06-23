@@ -1,13 +1,17 @@
 package it.tecnosphera.team.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-public class Player {
+@Entity
+public class Player implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn(name="team_id")

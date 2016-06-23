@@ -19,7 +19,7 @@ public class Team implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
-	private String id;
+	private int id;
 	
 	@OneToMany(fetch=FetchType.LAZY, mappedBy="team")
 	private Set<Player> players;
@@ -30,11 +30,11 @@ public class Team implements Serializable {
 	@Column(name = "city")
 	private String city;
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
